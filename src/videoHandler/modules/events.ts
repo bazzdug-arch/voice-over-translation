@@ -320,27 +320,34 @@ function bindAudioTrackLanguageSync(ctx: ExtraEventsContext): void {
   );
 }
 function bindGlobalDismissAndHotkeys(ctx: ExtraEventsContext): void {
-  const { self, overlayView, add, addMany, platformConfig } = ctx;
+  const { self, add, addMany, platformConfig } = ctx;
   add(document, "click", (event) => {
     const target = event.target as Node | null;
-    const button = overlayView.votButton?.container;
-    const menu = overlayView.votMenu?.container;
+    const currentOverlay = self.uiManager.votOverlayView;
+    const button = currentOverlay?.votButton?.container;
+    const menu = currentOverlay?.votMenu?.container;
+    const menuButton = currentOverlay?.votButton?.menuButton;
     const settings = self.uiManager.votSettingsView?.dialog?.container;
     const path = event.composedPath();
     const isInPath = (element?: EventTarget | null) =>
       Boolean(element && path.includes(element));
-    const isButton = isInPath(button);
+    const isButton = isInPath(button) || isInPath(menuButton);
     const isMenu = isInPath(menu);
     const isVideo = isInPath(self.container);
     const isSettings = isInPath(settings);
     const isTempDialog =
       target instanceof Element &&
       target.closest(".vot-dialog-temp") instanceof Element;
+    const isInsideOverlay =
+      target instanceof Node &&
+      ((button && containsCrossShadow(button, target)) ||
+        (menu && containsCrossShadow(menu, target)));
     debug.log(
       `[document click] ${isButton} ${isMenu} ${isVideo} ${isSettings} ${isTempDialog}`,
     );
-    if (isButton || isMenu || isSettings || isTempDialog) return;
-    if (!isVideo) overlayView.updateButtonOpacity(0);
+    if (isButton || isMenu || isSettings || isTempDialog || isInsideOverlay)
+      return;
+    if (!isVideo) currentOverlay?.updateButtonOpacity(0);
     if (menu && !menu.hidden) {
       menu.hidden = true;
       self.overlayVisibility?.queueAutoHide();

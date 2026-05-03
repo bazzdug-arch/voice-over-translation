@@ -247,7 +247,10 @@ export class OverlayView {
     element: HTMLElement,
     handler: () => void,
     signal: AbortSignal,
-    options: { preventPointerDefault?: boolean } = {},
+    options: {
+      preventPointerDefault?: boolean;
+      stopPointerPropagation?: boolean;
+    } = {},
   ): void {
     element.addEventListener(
       "pointerdown",
@@ -255,6 +258,9 @@ export class OverlayView {
         if (!isPrimaryPointerAction(event)) return;
         if (options.preventPointerDefault) {
           event.preventDefault();
+        }
+        if (options.stopPointerPropagation) {
+          event.stopPropagation();
         }
         handler();
       },
@@ -524,6 +530,7 @@ export class OverlayView {
 
     this.bindPrimaryAction(this.votButton.menuButton, toggleMenu, signal, {
       preventPointerDefault: true,
+      stopPointerPropagation: true,
     });
 
     // #region [Events] VOT Button Dragging
