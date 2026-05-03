@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "បកប្រែកំហុសពី API",
   "VOTDetectService": "សេវារកឃើញភាសា",
   "VOTProxyWorkerHost": "បញ្ចូលអាសយដ្ឋានកម្មករប្រូកស៊ី",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "បញ្ចូលអាសយដ្ឋានរបស់កម្មករប្រូកស៊ី m3u8",
   "proxySettings": "ការកំណត់ប្រូកស៊ី",
   "translationTakeApproximatelyMinute2": "ការបកប្រែនេះនឹងចំណាយពេលប្រមាណ{0}នាទី",

@@ -93,6 +93,12 @@ export class UIManager {
     this.globalPortalMount = createShadowMount({
       parent: this.getGlobalPortalHost(this.mount),
       rootClasses: ["vot-portal"],
+      hostStyles: {
+        position: "fixed",
+        inset: "0",
+        "pointer-events": "none",
+        "z-index": "2147483647",
+      },
     });
     this.votGlobalPortal = this.globalPortalMount.root;
 
@@ -191,7 +197,7 @@ export class UIManager {
         this.videoHandler?.subtitlesWidget?.releaseTooltip();
         this.videoHandler?.overlayVisibility?.cancel();
         this.videoHandler?.overlayVisibility?.show();
-        this.votSettingsView.open();
+        setTimeout(() => this.votSettingsView.open(), 50);
       })
       .addEventListener("click:downloadTranslation", async () => {
         await this.handleDownloadTranslationClick();
@@ -430,6 +436,16 @@ export class UIManager {
         this.runDetached(
           this.videoHandler.handleProxySettingsChanged("proxyWorkerHost"),
           "Failed to apply proxyWorkerHost change",
+        );
+      })
+      .addEventListener("change:votBackendUrl", () => {
+        if (!this.videoHandler) {
+          return;
+        }
+
+        this.runDetached(
+          this.videoHandler.handleProxySettingsChanged("votBackendUrl"),
+          "Failed to apply votBackendUrl change",
         );
       })
       .addEventListener("select:proxyTranslationStatus", () => {

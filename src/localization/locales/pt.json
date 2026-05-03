@@ -173,6 +173,7 @@
   "VOTTranslateAPIErrors": "Traduzir erros da API",
   "VOTDetectService": "Serviço de detecção de idioma",
   "VOTProxyWorkerHost": "Insira o endereço do proxy worker",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Insira o endereço do trabalhador proxy m3u8",
   "proxySettings": "Definições De Proxy",
   "translationTakeApproximatelyMinute2": "A tradução demora cerca de {0} minutos",

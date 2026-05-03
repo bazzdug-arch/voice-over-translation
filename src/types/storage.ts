@@ -56,6 +56,7 @@ export const storageKeys = [
   "subtitlesHotkey",
   "m3u8ProxyHost",
   "proxyWorkerHost",
+  "votBackendUrl",
   "translateProxyEnabled",
   "translateProxyEnabledDefault",
   "audioBooster",
@@ -125,6 +126,7 @@ export type StorageData = {
   subtitlesHotkey: null | string;
   m3u8ProxyHost: string;
   proxyWorkerHost: string;
+  votBackendUrl: string;
   translateProxyEnabled: TranslateProxyStatus;
   translateProxyEnabledDefault: boolean;
   audioBooster: boolean;

@@ -665,7 +665,9 @@ export class OverlayView {
 
     this.openSettingsButton.addEventListener(
       "click",
-      () => {
+      (e) => {
+        e.stopPropagation();
+        e.preventDefault();
         closeMenu();
         this.events["click:settings"].dispatch();
       },

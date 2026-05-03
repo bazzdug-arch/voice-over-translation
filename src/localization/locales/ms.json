@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "Terjemahkan ralat dari API",
   "VOTDetectService": "Perkhidmatan pengesanan bahasa",
   "VOTProxyWorkerHost": "Masukkan alamat pekerja proksi",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Masukkan alamat pekerja proksi m3u8",
   "proxySettings": "Tetapan Proksi",
   "translationTakeApproximatelyMinute2": "Terjemahan akan mengambil masa lebih kurang {0} minit",

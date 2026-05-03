@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "Traduire les erreurs de l'API",
   "VOTDetectService": "Service de détection de la langue",
   "VOTProxyWorkerHost": "Entrez l'adresse du travailleur mandataire",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Entrez l'adresse du travailleur proxy m3u8",
   "proxySettings": "Paramètres du Proxy",
   "translationTakeApproximatelyMinute2": "La traduction prendra environ {0} minutes",

@@ -7,6 +7,7 @@ import {
   m3u8ProxyHost,
   proxyOnlyCountries,
   proxyWorkerHost,
+  votBackendUrl,
 } from "../../config/config";
 import type { VideoHandler } from "../../index";
 import type { LanguageSelectKey } from "../../types/components/select";
@@ -83,6 +84,7 @@ export async function init(this: VideoHandler) {
     subtitlesHotkey: null,
     m3u8ProxyHost,
     proxyWorkerHost,
+    votBackendUrl,
     translateProxyEnabled: 0,
     translateProxyEnabledDefault: true,
     audioBooster: false,

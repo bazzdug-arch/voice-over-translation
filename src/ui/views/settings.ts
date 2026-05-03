@@ -17,6 +17,7 @@ const SETTINGS_EVENT_KEYS: Array<keyof SettingsViewEventMap> = [
   "select:responseLanguageSubtitles",
   "select:subtitlesFontFamily",
   "change:proxyWorkerHost",
+  "change:votBackendUrl",
   "change:useNewAudioPlayer",
   "change:onlyBypassMediaCSP",
   "change:showPiPButton",
@@ -54,6 +55,7 @@ import {
   defaultTranslationService,
   proxyOnlyCountries,
   proxyWorkerHost,
+  votBackendUrl,
 } from "../../config/config";
 import { isAuthRefreshMessage } from "../../core/authRefreshMessage";
 import { EventImpl } from "../../core/eventImpl";
@@ -254,6 +256,7 @@ export class SettingsView {
   translateHotkeyButton?: HotkeyButton;
   subtitlesHotkeyButton?: HotkeyButton;
   proxyWorkerHostTextfield?: Textfield;
+  votBackendUrlTextfield?: Textfield;
   proxyTranslationStatusSelectLabel?: Label;
   proxyTranslationStatusSelectTooltip?: Tooltip;
   proxyTranslationStatusSelect?: Select;
@@ -880,6 +883,11 @@ export class SettingsView {
       value: this.data.proxyWorkerHost,
       placeholder: proxyWorkerHost,
     });
+    this.votBackendUrlTextfield = new Textfield({
+      labelHtml: localizationProvider.get("VOTBackendUrl"),
+      value: this.data.votBackendUrl,
+      placeholder: votBackendUrl,
+    });
     const proxyEnabledLabels = [
       localizationProvider.get("VOTTranslateProxyDisabled"),
       localizationProvider.get("VOTTranslateProxyEnabled"),
@@ -915,6 +923,7 @@ export class SettingsView {
     });
     proxySection.content.append(
       this.proxyWorkerHostTextfield.container,
+      this.votBackendUrlTextfield.container,
       this.proxyTranslationStatusSelect.container,
     );
     this.translateAPIErrorsCheckbox = new Checkbox({
@@ -1465,6 +1474,16 @@ export class SettingsView {
         this.data.proxyWorkerHost,
       );
       this.events["change:proxyWorkerHost"].dispatch(value);
+    });
+    this.votBackendUrlTextfield.addEventListener("change", async (value) => {
+      const normalized = value.trim().replace(/\/+$/, "");
+      this.data.votBackendUrl = normalized || votBackendUrl;
+      await votStorage.set("votBackendUrl", this.data.votBackendUrl);
+      debug.log(
+        "votBackendUrl value changed. New value:",
+        this.data.votBackendUrl,
+      );
+      this.events["change:votBackendUrl"].dispatch(this.data.votBackendUrl);
     });
     this.proxyTranslationStatusSelect.addEventListener(
       "selectItem",

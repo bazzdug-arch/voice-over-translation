@@ -764,7 +764,7 @@ export class VideoHandler {
         }),
       },
       apiToken: this.data?.account?.token,
-      hostVOT: votBackendUrl,
+      hostVOT: this.data?.votBackendUrl || votBackendUrl,
       host: transportHost,
     };
     this.votClient = new (proxyClientEnabled ? VOTWorkerClient : VOTClient)(

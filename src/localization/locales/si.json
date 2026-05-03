@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "API වෙතින් දෝෂ පරිවර්තනය කරන්න",
   "VOTDetectService": "භාෂා හඳුනාගැනීමේ සේවාව",
   "VOTProxyWorkerHost": "ප්රොක්සි සේවක ලිපිනය ඇතුලත් කරන්න",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "M3u8 ප්රොක්සි සේවකයාගේ ලිපිනය ඇතුලත් කරන්න",
   "proxySettings": "ප්රොක්සි සැකසුම්",
   "translationTakeApproximatelyMinute2": "පරිවර්තනය සඳහා ආසන්න වශයෙන් {0} විනාඩි ගතවනු ඇත",

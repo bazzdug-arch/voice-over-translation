@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "Översätt fel från API",
   "VOTDetectService": "Språkidentifieringstjänst",
   "VOTProxyWorkerHost": "Ange proxyarbetarens adress",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Ange adressen till M3U8-proxyarbetaren",
   "proxySettings": "Proxyinställningar",
   "translationTakeApproximatelyMinute2": "Översättningen tar ungefär {0} minuter",

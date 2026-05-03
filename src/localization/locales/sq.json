@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "Përktheni gabimet NGA API",
   "VOTDetectService": "Shërbimi i zbulimit të gjuhës",
   "VOTProxyWorkerHost": "Vendosni adresën e punonjësit të përfaqësuesit",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Vendosni adresën e punonjësit të përfaqësuesit m3u8",
   "proxySettings": "Cilësimet E Përfaqësuesit",
   "translationTakeApproximatelyMinute2": "Përkthimi do të zgjasë afërsisht {0} minuta",

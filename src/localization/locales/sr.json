@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "Превођење грешака из АПИ-ја",
   "VOTDetectService": "Услуга дефиниције језика",
   "VOTProxyWorkerHost": "Унесите радну адресу проки сервера",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "Унесите адресу радног проки сервера м3у8",
   "proxySettings": "Подешавања проксија",
   "translationTakeApproximatelyMinute2": "Превод ће трајати приближно {0} минута",

@@ -177,6 +177,7 @@
   "VOTTranslateAPIErrors": "Переводить ошибки из API",
   "VOTDetectService": "Сервис определения языка",
   "VOTProxyWorkerHost": "Введите адрес worker прокси-сервера",
+  "VOTBackendUrl": "URL сервера VOT",
   "VOTM3u8ProxyHost": "Введите адрес m3u8 прокси-сервера",
   "proxySettings": "Настройки прокси-сервера",
   "translationTakeApproximatelyMinute2": "Перевод займёт примерно {0} минуту",

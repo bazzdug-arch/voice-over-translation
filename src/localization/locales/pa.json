@@ -174,6 +174,7 @@
   "VOTTranslateAPIErrors": "ਏਪੀਆਈ ਤੋਂ ਗਲਤੀਆਂ ਅਨੁਵਾਦ ਕਰੋ",
   "VOTDetectService": "ਭਾਸ਼ਾ ਖੋਜ ਸੇਵਾ",
   "VOTProxyWorkerHost": "ਪਰਾਕਸੀ ਵਰਕਰ ਐਡਰੈੱਸ ਦਿਓ",
+  "VOTBackendUrl": "VOT Backend URL",
   "VOTM3u8ProxyHost": "ਐਮ 3 ਯੂ 8 ਪ੍ਰੌਕਸੀ ਵਰਕਰ ਦਾ ਪਤਾ ਦਰਜ ਕਰੋ",
   "proxySettings": "ਪਰਾਕਸੀ ਸੈਟਿੰਗ",
   "translationTakeApproximatelyMinute2": "ਅਨੁਵਾਦ ਲਗਭਗ {0} ਮਿੰਟ ਲਵੇਗਾ",
