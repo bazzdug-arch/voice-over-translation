@@ -24,6 +24,7 @@ const FORCED_DETECTED_LANGUAGE_BY_HOST: Record<string, RequestLang> = {
   rutube: "ru",
   "ok.ru": "ru",
   mail_ru: "ru",
+  cloudmailru: "en",
   weverse: "ko",
   niconico: "ja",
   youku: "zh",

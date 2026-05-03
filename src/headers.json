@@ -36,6 +36,7 @@
     "*://*.bilibili.com/*",
     "*://*.bilibili.tv/*",
     "*://my.mail.ru/*",
+    "*://cloud.mail.ru/*",
     "*://*.bitchute.com/*",
     "*://*.coursera.org/*",
     "*://*.udemy.com/course/*",
@@ -149,6 +150,8 @@
   ],
   "connect": [
     "yandex.ru",
+    "cloud.mail.ru",
+    "datacloudmail.ru",
     "disk.yandex.kz",
     "disk.yandex.com",
     "disk.yandex.com.am",
