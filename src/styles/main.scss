@@ -169,6 +169,12 @@ html.vot-keyboard-nav vot-block *:focus-visible {
 
 .vot-portal {
   display: inline;
+  pointer-events: none;
+
+  & > .vot-dialog-container {
+    pointer-events: auto;
+  }
+
   &-local {
     position: fixed;
     left: 0;
